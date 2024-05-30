@@ -724,6 +724,7 @@ button:active {
 .footer-section {
   margin-top: 130px;
   background-color: #1c1b1d;
+  position: relative;
   z-index: 99999999999 !important;
 }
 
@@ -800,6 +801,11 @@ button:active {
   width: 100%;
   display: flex;
   gap: 10px;
+
+  .error {
+    border-bottom: 1px solid red;
+  }
+
   input,
   textarea {
     width: 100%;
