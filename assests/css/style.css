@@ -85,6 +85,21 @@ button:active {
   transform: scale(0.9);
 }
 
+.btn {
+  width: 180px;
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Nunito Sans";
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
 /* utilities */
 
 /* header start */
@@ -184,16 +199,6 @@ button:active {
   display: none;
 }
 
-.navbar .contact-us-btn {
-  background-color: transparent;
-  border: 1px solid #ffffff;
-  color: #ffffff;
-  padding: 12px 20px;
-  border-radius: 5px;
-  font-size: 17px;
-  font-weight: 400;
-  font-family: "Nunito Sans";
-}
 /* navbar */
 
 /* Hero part */
@@ -775,6 +780,11 @@ button:active {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    &:hover {
+      transform: rotate(360deg);
+    }
   }
 }
 
@@ -815,19 +825,6 @@ button:active {
     border-bottom: 1px solid #fff;
     outline: none;
     color: #fff;
-  }
-
-  button {
-    width: 180px;
-    background-color: transparent;
-    border: 1px solid #ffffff;
-    color: #ffffff;
-    padding: 12px 20px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 400;
-    font-family: "Nunito Sans";
-    margin-top: 20px;
   }
 }
 
