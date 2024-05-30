@@ -5,7 +5,6 @@ window.onload = function () {
   const sliderWrapper = document.querySelector(".slider-wrapper");
   const portfolioNextBtn = document.querySelector(".portfolio-next-btn");
   const portfolioPrevBtn = document.querySelector(".portfolio-prev-btn");
-  const portfolioImage = document.querySelector(".portfolio img");
   let count = 0;
 
   menuBarBtn.addEventListener("click", () => {
@@ -13,20 +12,17 @@ window.onload = function () {
   });
 
   closeBtn.addEventListener("click", () => {
-    console.log("clicked");
     nav.classList.remove("active");
   });
 
   portfolioNextBtn.addEventListener("click", () => {
     count++;
 
-    console.log("count", count);
-    moveSlider();
+    moveSlider(sliderWrapper);
+
     if (count === 2) {
       count = -1;
     }
-
-    console.log(portfolioImage.offsetWidth);
   });
 
   portfolioPrevBtn.addEventListener("click", () => {
@@ -35,17 +31,15 @@ window.onload = function () {
     }
 
     count--;
-    console.log("count", count);
 
-    moveSlider();
+    moveSlider(sliderWrapper);
   });
 
-  function moveSlider() {
-    sliderWrapper.style.transform = `translateX(-${count * 100}%)`;
+  function moveSlider(slider) {
+    slider.style.transform = `translateX(-${count * 100}%)`;
   }
 
-  // Wait for images to load
   window.addEventListener("load", () => {
-    moveSlider(); // Call moveSlider after images have loaded to get accurate width
+    moveSlider();
   });
 };
